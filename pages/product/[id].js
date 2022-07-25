@@ -12,14 +12,13 @@ import axios from "axios"
 
 const DetailProduct = () => {
     const [product, setProduct] = useState([])
-
     const [images, setImages] = useState([])
     const [popProductImage, setPopProductImage] = useState([])
     const router = useRouter()
 
     useEffect(() => {
-        getProduct()
-    }, [])
+        getProduct();
+    }, []);
 
 
     const getProduct = async () => {
@@ -56,7 +55,9 @@ const DetailProduct = () => {
             <div className={style.left}>
                 <div className={style.top}>
                     <Carousel className={style.carousel}>
-                        { images.map((item) => <Images props={item}></Images>) }
+                        {images.map((item) => (
+                            <Images props={item}></Images>
+                        ))}
                     </Carousel>
                 </div>
                 
