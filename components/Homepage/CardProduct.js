@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import Style from "../../styles/Card_Produk.module.css";
-import Image from "next/image";
 
 export default function CardProduct(props) {
   console.log('id produk: ', props.props.id)
@@ -11,7 +10,7 @@ export default function CardProduct(props) {
       <div id={props.props.id} className={Style.card}>
         <Link href={`/product/${props.props.id}`}>
           <a>
-            <Image
+            <img
               src={props.props.images[0].img}
               alt="Image Tidak Ditemukan"
               className={Style.imgProduk}
