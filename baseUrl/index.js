@@ -1,0 +1,1 @@
+export const baseURL = "https://fsw6-group4-staging.herokuapp.com/api/v1";
