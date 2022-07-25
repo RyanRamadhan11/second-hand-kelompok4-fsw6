@@ -11,10 +11,10 @@ import { useRouter } from 'next/router';
 import axios from "axios"
 
 const DetailProduct = () => {
-    const [product, setProduct] = useState([])
-    const [images, setImages] = useState([])
-    const [popProductImage, setPopProductImage] = useState([])
-    const router = useRouter()
+    const [product, setProduct] = useState([]);
+    const [images, setImages] = useState([]);
+    const [popProductImage, setPopProductImage] = useState([]);
+    const router = useRouter();
 
     useEffect(() => {
         getProduct();
@@ -23,27 +23,27 @@ const DetailProduct = () => {
 
     const getProduct = async () => {
         try {
-            const response = await axios.get(`https://fsw6-group4-staging.herokuapp.com/api/v1/products/info/${router.query.id}`)
-            setProduct(response.data.data[0])
+            const response = await axios.get(`https://fsw6-group4-staging.herokuapp.com/api/v1/products/info/${router.query.id}`);
+            setProduct(response.data.data[0]);
 
-            setImages(response.data.data[0].images)
-            setPopProductImage(response.data.data[0].images[0].img)
+            setImages(response.data.data[0].images);
+            setPopProductImage(response.data.data[0].images[0].img);
         }
 
         catch(err) {
-            console.log(err)
+            console.log(err);
         }
     }
 
-    const [displayClass, setDisplayClass] = useState(style.popupHide)
+    const [displayClass, setDisplayClass] = useState(style.popupHide);
 
     const changeDisplay = () => {
         if(displayClass == style.popupHide) {
-            setDisplayClass(style.popupDisplay)
+            setDisplayClass(style.popupDisplay);
         }
 
         else {
-            setDisplayClass(style.popupHide)
+            setDisplayClass(style.popupHide);
         }
     }
 
