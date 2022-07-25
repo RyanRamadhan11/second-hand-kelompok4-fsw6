@@ -8,7 +8,7 @@ import axios from "axios";
 
 import Styles from "./register.module.css"
 
-export default function register(){
+export default function Register(){
   const {register, handleSubmit} = useForm()
   const onSubmit = (data) =>{
     axios.post("https://fsw6-group4-staging.herokuapp.com/api/v1/users/add",{

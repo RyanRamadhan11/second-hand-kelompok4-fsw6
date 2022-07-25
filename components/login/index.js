@@ -73,7 +73,7 @@ export default function Login() {
                                 </div>
 
                                 <div className={Styles.email} align="center">
-                                    <label for="Email" className={Styles.form_label}>E-mail</label><br></br>
+                                    <label htmlFor="Email" className={Styles.form_label}>E-mail</label><br></br>
                                     <input type="text" className={Styles.form_control} name="Email" id="Email" placeholder="Masukkan Email Anda" {...register("email")} required></input>
                                 </div>
 
@@ -81,7 +81,7 @@ export default function Login() {
                                 </br>
 
                                 <div className={Styles.password} align="center">
-                                    <label for="password" className={Styles.form_label}>Password</label><br></br>
+                                    <label htmlFor="password" className={Styles.form_label}>Password</label><br></br>
                                     <input type="password" className={Styles.form_control} name="password" id="password" placeholder="Masukkan Password Anda" {...register("password")} required></input>
                                 </div>
                                 <br></br>
